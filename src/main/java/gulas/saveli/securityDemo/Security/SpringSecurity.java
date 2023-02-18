@@ -14,5 +14,6 @@ public class SpringSecurity {
                 .requestMatchers("/user").hasRole("ROLE_USER")
                 .requestMatchers("/").permitAll()
                 .and().formLogin();
+        return http.build();
     }
 }
